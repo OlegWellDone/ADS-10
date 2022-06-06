@@ -1,6 +1,8 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TREE_H_
 #define INCLUDE_TREE_H_
+#include <string>
+#include <vector>
 
 class Tree {
  private:
@@ -27,9 +29,9 @@ class Tree {
     for (size_t i = 0; i < root -> childs.size(); i++)
       create(root -> childs[i], path);
   }
-  
+
   std :: vector <std :: string> vect;
-  void switcher (Node * root, std :: string znach = "") {
+  void switcher(Node * root, std :: string znach = "") {
     if (!root -> childs.size()) {
       znach += root -> value;
       vect.push_back(znach);
@@ -39,7 +41,7 @@ class Tree {
     for (size_t i = 0; i < root -> childs.size(); i++)
       switcher(root -> childs[i], znach);
   }
-  
+
  public:
   std :: string operator[](int i) const {
     if (i >= vect.size())
