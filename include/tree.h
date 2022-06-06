@@ -22,12 +22,12 @@ class Tree {
           break;
         }
     }
-    for (size_t = 0; i < path.size(); i++)
+    for (size_t i = 0; i < path.size(); i++)
       root -> childs.push_back(new Node());
     for (size_t i = 0; i < root -> childs.size(); i++)
       root -> childs[i] -> value = path[i];
     for (size_t i = 0; i < root -> childs.size(); i++)
-      create(root -> childs[i], path);
+      creator(root -> childs[i], path);
   }
 
   std :: vector <std :: string> vect;
